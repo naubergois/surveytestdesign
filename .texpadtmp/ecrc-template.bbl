@@ -1,0 +1,326 @@
+\newcommand{\noopsort}[1]{} \newcommand{\printfirst}[2]{#1}
+  \newcommand{\singleletter}[1]{#1} \newcommand{\switchargs}[2]{#2#1}
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Sandler2004}
+C.~Sandler, T.~Badgett, T.~Thomas, {The Art of Software Testing} (2004) 200.
+
+\bibitem{Corporation2007}
+M.~Corporation,
+  \href{http://www.amazon.com/Performance-Testing-Guidance-Web-Applications/dp/0735625700
+  http://msdn.microsoft.com/en-us/library/bb924375.aspx}{{Performance Testing
+  Guidance for Web Applications}} (Nov. 2007).
+\newline\urlprefix\url{http://www.amazon.com/Performance-Testing-Guidance-Web-Applications/dp/0735625700
+  http://msdn.microsoft.com/en-us/library/bb924375.aspx}
+
+\bibitem{Perry2004}
+W.~E. Perry,
+  \href{http://onlinelibrary.wiley.com/doi/10.1002/cbdv.200490137/abstract$\backslash$nhttp://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Effective+Methods+for+Software+Testing{\#}2$\backslash$nhttp://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Effective+methods+for}{{Effective
+  methods for software testing}}, 2004.
+\newblock \href
+  {http://dx.doi.org/10.1002/1521-3773(20010316)40:6<9823::AID-ANIE9823>3.3.CO;2-C}
+  {\path{doi:10.1002/1521-3773(20010316)40:6<9823::AID-ANIE9823>3.3.CO;2-C}}.
+\newline\urlprefix\url{http://onlinelibrary.wiley.com/doi/10.1002/cbdv.200490137/abstract$\backslash$nhttp://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Effective+Methods+for+Software+Testing{\#}2$\backslash$nhttp://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Effective+methods+for}
+
+\bibitem{DiLucca2006}
+G.~a. {Di Lucca}, A.~R. Fasolino, {Testing Web-based applications: The state of
+  the art and future trends}, Information and Software Technology 48 (2006)
+  1172--1186.
+\newblock \href {http://dx.doi.org/10.1016/j.infsof.2006.06.006}
+  {\path{doi:10.1016/j.infsof.2006.06.006}}.
+
+\bibitem{Lewis2005}
+W.~E. Lewis, D.~Dobbs, G.~Veerapillai,
+  \href{http://books.google.com/books?id=fgaBDd0TfT8C{\&}pgis=1}{{Software
+  testing and continuous quality improvement}}, 2005.
+\newline\urlprefix\url{http://books.google.com/books?id=fgaBDd0TfT8C{\&}pgis=1}
+
+\bibitem{Molyneaux2009}
+I.~Molyneaux, {The Art of Application Performance Testing: Help for Programmers
+  and Quality Assurance}, 1st Edition, "O'Reilly Media, Inc.", 2009.
+
+\bibitem{Afzal2009a}
+W.~Afzal, R.~Torkar, R.~Feldt, {A systematic review of search-based testing for
+  non-functional system properties}, Information and Software Technology 51~(6)
+  (2009) 957--976.
+\newblock \href {http://dx.doi.org/10.1016/j.infsof.2008.12.005}
+  {\path{doi:10.1016/j.infsof.2008.12.005}}.
+
+\bibitem{Jiang2010}
+Z.~Jiang, \href{http://dl.acm.org/citation.cfm?id=1831726}{{Automated analysis
+  of load testing results}}, Ph.D. thesis (2010).
+\newline\urlprefix\url{http://dl.acm.org/citation.cfm?id=1831726}
+
+\bibitem{Kitchenham2007b}
+B.~Kitchenham, S.~Charters,
+  \href{http://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Guidelines+for+performing+Systematic+Literature+Reviews+in+Software+Engineering{\#}0{\%}5Cnhttp://www.dur.ac.uk/ebse/resources/Systematic-reviews-5-8.pdf}{{Guidelines
+  for performing Systematic Literature reviews in Software Engineering Version
+  2.3}}, Engineering 45~(4ve) (2007) 1051.
+\newblock \href {http://arxiv.org/abs/1304.1186} {\path{arXiv:1304.1186}},
+  \href {http://dx.doi.org/10.1145/1134285.1134500}
+  {\path{doi:10.1145/1134285.1134500}}.
+\newline\urlprefix\url{http://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Guidelines+for+performing+Systematic+Literature+Reviews+in+Software+Engineering{\#}0{\%}5Cnhttp://www.dur.ac.uk/ebse/resources/Systematic-reviews-5-8.pdf}
+
+\bibitem{Marinho2014}
+M.~Marinho, S.~Sampaio, T.~Lima, H.~de~Moura,
+  \href{http://arxiv.org/abs/1412.3690}{{A Systematic Review of Uncertainties
+  in Software Project Management}}, International Journal of Software
+  Engineering {\&} Applications 5~(6) (2014) 1--21.
+\newblock \href {http://arxiv.org/abs/1412.3690} {\path{arXiv:1412.3690}},
+  \href {http://dx.doi.org/10.5121/ijsea.2014.5601}
+  {\path{doi:10.5121/ijsea.2014.5601}}.
+\newline\urlprefix\url{http://arxiv.org/abs/1412.3690}
+
+\bibitem{Erinle2013}
+B.~Erinle, {Performance Testing With JMeter 2.9}, 2013.
+
+\bibitem{Feitelson2013}
+D.~G. Feitelson, {Workload Modeling for Computer Systems Performance
+  Evaluation}, Cambridge University Press, 2013.
+
+\bibitem{Goncalves2014}
+M.~C. Gon\c{c}alves, {Um Processo de Infer\^{e}ncia de Desempenho para Apoiar o
+  Planejamento da Capacidade de Aplica\c{c}\~{o}es na Nuvem Um Processo de
+  Infer\^{e}ncia de Desempenho para Apoiar o Planejamento da Capacidade de
+  Aplica\c{c}\~{o}es na Nuvem}.
+
+\bibitem{Luo2015}
+Q.~Luo, A.~Nair, M.~Grechanik, D.~Poshyvanyk, {FOREPOST: finding performance
+  problems automatically with feedback-directed learning software testing},
+  Empirical Software Engineering (2015) 1--51\href
+  {http://dx.doi.org/10.1007/s10664-015-9413-5}
+  {\path{doi:10.1007/s10664-015-9413-5}}.
+
+\bibitem{Wert2014}
+A.~Wert, M.~Oehler, C.~Heger, R.~Farahbod,
+  \href{http://dx.doi.org/10.1145/2602576.2602579}{{Automatic detection of
+  performance anti-patterns in inter-component communications}}, QoSA 2014 -
+  Proceedings of the 10th International ACM SIGSOFT Conference on Quality of
+  Software Architectures (Part of CompArch 2014) (2014) 3--12\href
+  {http://dx.doi.org/10.1145/2602576.2602579}
+  {\path{doi:10.1145/2602576.2602579}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1145/2602576.2602579}
+
+\bibitem{MarkUtting2012}
+A.~P. {Mark Utting}, B.~Legeard, {A taxonomy of model-based testing
+  approaches}, Software Testing Verification and Reliability 24~(8) (2012)
+  297--312.
+\newblock \href {http://dx.doi.org/10.1002/stvr} {\path{doi:10.1002/stvr}}.
+
+\bibitem{Bertolino2008}
+{Model-based generation of testbeds for web services}, Testing of Software and
+  {\ldots} (2008) 266--282.
+
+\bibitem{Hierons2009}
+R.~M. Hierons, K.~Bogdanov, J.~P. Bowen, R.~Cleaveland, J.~Derrick, J.~Dick,
+  M.~Gheorghe, M.~Harman, K.~Kapoor, P.~Krause, G.~L{\"{u}}ttgen, A.~J.~H.
+  Simons, S.~Vilkomir, M.~R. Woodward, H.~Zedan, {Using formal specifications
+  to support testing}, ACM Comput. Surv. 41~(2) (2009) 1--76.
+\newblock \href {http://dx.doi.org/http://doi.acm.org/10.1145/1459352.1459354}
+  {\path{doi:http://doi.acm.org/10.1145/1459352.1459354}}.
+
+\bibitem{Wang2013}
+X.~Wang, B.~Zhou, W.~Li,
+  \href{http://www.tandfonline.com/doi/abs/10.1080/02533839.2012.726028}{{Model-based
+  load testing of web applications}}, Journal of the Chinese Institute of
+  Engineers 36~(1) (2013) 74--86.
+\newblock \href {http://dx.doi.org/10.1080/02533839.2012.726028}
+  {\path{doi:10.1080/02533839.2012.726028}}.
+\newline\urlprefix\url{http://www.tandfonline.com/doi/abs/10.1080/02533839.2012.726028}
+
+\bibitem{Draheim2006b}
+D.~Draheim, J.~Grundy, J.~Hosking, C.~Lutteroth, G.~Weber, {Realistic load
+  testing of Web applications}, in: Conference on Software Maintenance and
+  Reengineering (CSMR'06), 2006.
+\newblock \href {http://dx.doi.org/10.1109/CSMR.2006.43}
+  {\path{doi:10.1109/CSMR.2006.43}}.
+
+\bibitem{Menasce2002a}
+D.~A. Menasc{\'{e}}, G.~Mason, {TPC-W : A Benchmark for E-commerce}~(June)
+  (2002) 1--6.
+
+\bibitem{MohammadS.Obaidat}
+P.~N. {Mohammad S. Obaidat}, F.~Zarai, {Modeling and Simulation of Computer
+  Networks and Systems Methodologies and Applications}.
+
+\bibitem{Vogele2016}
+C.~Vogele, A.~van Hoorn, E.~Schulz, W.~Hasselbring, H.~Krcmar,
+  \href{"http://dx.doi.org/10.1007/s10270-016-0566-5}{{WESSBAS: extraction of
+  probabilistic workload specifications for load testing and performance
+  prediction???a model-driven approach for session-based application systems}},
+  Software and Systems Modeling~(October) (2016) 1--35.
+\newblock \href {http://dx.doi.org/10.1007/s10270-016-0566-5}
+  {\path{doi:10.1007/s10270-016-0566-5}}.
+\newline\urlprefix\url{"http://dx.doi.org/10.1007/s10270-016-0566-5}
+
+\bibitem{Harman2010}
+M.~Harman, P.~McMinn, {A theoretical and empirical study of search-based
+  testing: Local, global, and hybrid search}, IEEE Transactions on Software
+  Engineering 36~(2) (2010) 226--247.
+\newblock \href {http://dx.doi.org/10.1109/TSE.2009.71}
+  {\path{doi:10.1109/TSE.2009.71}}.
+
+\bibitem{Alba2008}
+E.~Alba, F.~Chicano, {Observations in using parallel and sequential
+  evolutionary algorithms for automatic software testing}, Computers and
+  Operations Research 35~(10) (2008) 3161--3183.
+\newblock \href {http://dx.doi.org/10.1016/j.cor.2007.01.016}
+  {\path{doi:10.1016/j.cor.2007.01.016}}.
+
+\bibitem{Baars2011}
+A.~I. Baars, K.~Lakhotia, T.~E.~J. Vos, J.~Wegener,
+  \href{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp={\&}arnumber=6078178}{{Search-based
+  testing, the underlying engine of Future Internet testing}}, Federated
+  Conference on Computer Science and Information Systems (FedCSIS 2011) (2011)
+  917--923.
+\newline\urlprefix\url{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp={\&}arnumber=6078178}
+
+\bibitem{McMinn2004}
+P.~McMinn, R.~Court, S.~Testing, P.~Street, {Search-based software test data
+  generation: a survey}, Software testing, Verification and reliability 14
+  (2004) 1--58.
+\newblock \href {http://dx.doi.org/10.1002/stvr.294}
+  {\path{doi:10.1002/stvr.294}}.
+
+\bibitem{Garousi2006}
+V.~Garousi, {Traffic-aware Stress Testing of Distributed Real-Time Systems
+  based on UML Models using Genetic Algorithms}, Ph.D. thesis (2006).
+
+\bibitem{Garousi2010}
+V.~Garousi, {A Genetic Algorithm-Based Stress Test Requirements Generator Tool
+  and Its Empirical Evaluation}, IEEE Transactions on Software Engineering
+  36~(6) (2010) 778--797.
+\newblock \href {http://dx.doi.org/10.1109/TSE.2010.5}
+  {\path{doi:10.1109/TSE.2010.5}}.
+
+\bibitem{DiAlesio2013}
+S.~{Di Alesio}, S.~Nejati, L.~Briand, A.~Gotlieb, {Stress testing of task
+  deadlines: A constraint programming approach}, IEEE Xplore (2013)
+  158--167\href {http://dx.doi.org/10.1109/ISSRE.2013.6698915}
+  {\path{doi:10.1109/ISSRE.2013.6698915}}.
+
+\bibitem{DiAlesio2014}
+S.~{Di Alesio}, S.~Nejati, L.~Briand, A.~Gotlieb, {Worst-Case Scheduling of
+  Software Tasks -- A Constraint Optimization Model to Support Performance
+  Testing}, Principles and Practice of Constraint Programming  813--830\href
+  {http://dx.doi.org/10.1007/978-3-319-10428-7{\_}58}
+  {\path{doi:10.1007/978-3-319-10428-7{\_}58}}.
+
+\bibitem{Alesio2015}
+S.~D.~I. Alesio, L.~C. Briand, S.~Nejati, A.~Gotlieb, {Combining Genetic
+  Algorithms and Constraint Programming}, ACM Transactions on Software
+  Engineering and Methodology 25~(1).
+
+\bibitem{Gois2016}
+N.~Gois, P.~Porfirio, A.~Coelho, T.~Barbosa, {Improving Stress Search Based
+  Testing using a Hybrid Metaheuristic Approach}, in: Proceedings of the 2016
+  Latin American Computing Conference (CLEI), 2016, pp. 718--728.
+
+\bibitem{Sullivan}
+M.~O. Sullivan, S.~V\"{o}ssner, J.~Wegener, D.-b. Ag, {Testing Temporal
+  Correctness of Real-Time Systems --- A New Approach Using Genetic Algorithms
+  and Cluster Analysis ---}  1--20.
+
+\bibitem{tracey2000search}
+N.~J. Tracey, A search-based automated test-data generation framework for
+  safety-critical software, Ph.D. thesis, Citeseer (2000).
+
+\bibitem{Alander}
+J.~T.~J. Alander, T.~Mantere, P.~Turunen, {Genetic Algorithm Based Software
+  Testing}, in: Neural Nets and Genetic Algorithms, 1998.
+
+\bibitem{Wegener1997}
+J.~Wegener, H.~Sthamer, B.~F. Jones, D.~E. Eyres,
+  \href{http://www.springerlink.com/index/uh26067rt3516765.pdf}{{Testing
+  real-time systems using genetic algorithms}}, Software Quality Journal 6~(2)
+  (1997) 127--135.
+\newblock \href {http://dx.doi.org/10.1023/A:1018551716639}
+  {\path{doi:10.1023/A:1018551716639}}.
+\newline\urlprefix\url{http://www.springerlink.com/index/uh26067rt3516765.pdf}
+
+\bibitem{J.WegenerK.GrimmM.GrochtmannH.Sthamer1996}
+B.~J. {J. Wegener, K. Grimm, M. Grochtmann, H. Sthamer}, {Systematic testing of
+  real-time systems}, EuroSTAR'96: Proceedings of the Fourth International
+  Conference on Software Testing Analysis and Review.
+
+\bibitem{Briand2005}
+L.~C. Briand, Y.~Labiche, M.~Shousha, {Stress testing real-time systems with
+  genetic algorithms}, Proceedings of the 2005 conference on Genetic and
+  evolutionary computation - GECCO '05 (2005) 1021\href
+  {http://dx.doi.org/10.1145/1068009.1068183}
+  {\path{doi:10.1145/1068009.1068183}}.
+
+\bibitem{Canfora}
+G.~Canfora, M.~D. Penta, R.~Esposito, M.~L. Villani, {2005., Canfora, G., An
+  approach for QoS-aware service composition based on genetic algorithms}.
+
+\bibitem{Wegener1998}
+J.~Wegener, M.~Grochtmann, {Verifying timing constraints of real-time systems
+  by means of evolutionary testing}, Real-Time Systems 15~(3) (1998) 275--298.
+\newblock \href {http://dx.doi.org/Doi 10.1023/A:1008096431840} {\path{doi:Doi
+  10.1023/A:1008096431840}}.
+
+\bibitem{Mueller1998}
+F.~Mueller, J.~Wegener, {A comparison of static analysis and evolutionary
+  testing for the verification of timing constraints}, Proceedings. Fourth IEEE
+  Real-Time Technology and Applications Symposium (Cat. No.98TB100245)\href
+  {http://dx.doi.org/10.1109/RTTAS.1998.683198}
+  {\path{doi:10.1109/RTTAS.1998.683198}}.
+
+\bibitem{Puschner1998}
+P.~Puschner, R.~Nossal, {Testing the results of static worst-case
+  execution-time analysis}, Proceedings 19th IEEE Real-Time Systems Symposium
+  (Cat. No.98CB36279)\href {http://dx.doi.org/10.1109/REAL.1998.739738}
+  {\path{doi:10.1109/REAL.1998.739738}}.
+
+\bibitem{Stations}
+H.~{Wegener, Joachim and Pitschinetz, Roman and Sthamer}, {Automated Testing of
+  Real-Time Tasks}, Proceedings of the 1st International Workshop on Automated
+  Program Analysis, Testing and Verification (WAPATV'00).
+
+\bibitem{Gross2000}
+H.~Gross, B.~F. Jones, D.~E. Eyres, {Structural performance measure of
+  evolutionary testing applied to worst-case timing of real-time systems},
+  Software, IEE Proceedings- 147~(2) (2000) 25--30.
+\newblock \href {http://dx.doi.org/10.1049/ip-sen} {\path{doi:10.1049/ip-sen}}.
+
+\bibitem{Penta2007}
+M.~D. Penta, G.~Canfora, G.~Esposito, {Search-based testing of service level
+  agreements}, in: Proceedings of the 9th annual conference on Genetic and
+  evolutionary computation, 2007, pp. 1090--1097.
+
+\bibitem{Garousi2008}
+V.~Garousi, {Empirical analysis of a genetic algorithm-based stress test
+  technique}, Proceedings of the 10th annual conference on Genetic and
+  evolutionary computation - GECCO '08 (2008) 1743\href
+  {http://dx.doi.org/10.1145/1389095.1389433}
+  {\path{doi:10.1145/1389095.1389433}}.
+
+\bibitem{Tracey1998}
+N.~J. Tracey, J.~a. Clark, K.~C. Mander, {Automated Programme Flaw Finding
+  using Simulated Annealing}.
+
+\bibitem{Pohlheim2005}
+H.~Pohlheim, M.~Conrad, A.~Griep, {Evolutionary Safety Testing of Embedded
+  Control Software by Automatically Generating Compact Test Data Sequences},
+  Analysis~(724) (2005) 804----814.
+\newblock \href {http://dx.doi.org/10.4271/2005-01-0750}
+  {\path{doi:10.4271/2005-01-0750}}.
+
+\bibitem{shousha2003performance}
+M.~Shousha, Performance stress testing of real-time systems using genetic
+  algorithms, Ph.D. thesis, Carleton University Ottawa (2003).
+
+\bibitem{Grechanik2012}
+M.~Grechanik, C.~Fu, Q.~Xie, {Automatically finding performance problems with
+  feedback-directed learning software testing}, 2012 34th International
+  Conference on Software Engineering (ICSE) (2012) 156--166\href
+  {http://dx.doi.org/10.1109/ICSE.2012.6227197}
+  {\path{doi:10.1109/ICSE.2012.6227197}}.
+
+\end{thebibliography}

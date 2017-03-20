@@ -1,0 +1,80 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ecrc-template.aux
+The style file: elsarticle-num.bst
+Database file #1: ../biblio.bib
+Repeated entry---line 1201 of file ../biblio.bib
+ : @inproceedings{Gois2016
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1857 of file ../biblio.bib
+ : @article{Bertolino2008
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1871 of file ../biblio.bib
+ : @article{MarkUtting2012
+ :                        ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in Sandler2004
+Warning--empty publisher in Perry2004
+Warning--empty publisher in Lewis2005
+Warning--empty school in Jiang2010
+Warning--empty publisher in Erinle2013
+Warning--empty journal in Goncalves2014
+Warning--empty author in Bertolino2008
+Warning--empty pages in Draheim2006b
+Warning--empty journal in Menasce2002a
+Warning--there's a number but no volume in Menasce2002a
+Warning--empty publisher in MohammadS.Obaidat
+Warning--empty year in MohammadS.Obaidat
+Warning--there's a number but no volume in Vogele2016
+Warning--empty school in Garousi2006
+Warning--empty year in DiAlesio2014
+Warning--empty journal in Sullivan
+Warning--empty year in Sullivan
+Warning--empty pages in Alander
+Warning--empty journal in Canfora
+Warning--empty journal in Tracey1998
+Warning--there's a number but no volume in Pohlheim2005
+You've used 51 entries,
+            2937 wiz_defined-function locations,
+            1023 strings with 16827 characters,
+and the built_in function-call counts, 14373 in all, are:
+= -- 1356
+> -- 473
+< -- 4
++ -- 191
+- -- 140
+* -- 1078
+:= -- 1949
+add.period$ -- 69
+call.type$ -- 51
+change.case$ -- 47
+chr.to.int$ -- 6
+cite$ -- 72
+duplicate$ -- 435
+empty$ -- 1610
+format.name$ -- 176
+if$ -- 3687
+int.to.chr$ -- 0
+int.to.str$ -- 51
+missing$ -- 52
+newline$ -- 191
+num.names$ -- 50
+pop$ -- 344
+preamble$ -- 2
+purify$ -- 0
+quote$ -- 0
+skip$ -- 935
+stack$ -- 0
+substring$ -- 650
+swap$ -- 123
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 21
+while$ -- 109
+width$ -- 53
+write$ -- 446
+(There were 3 error messages)

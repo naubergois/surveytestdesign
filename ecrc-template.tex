@@ -1,0 +1,846 @@
+
+% Template for Elsevier CRC journal article
+% version 1.1 dated 16 March 2010
+
+% This file (c) 2010 Elsevier Ltd.  Modifications may be freely made,
+% provided the edited file is saved under a different name
+
+% This file contains modifications for Procedia Computer Science
+% but may easily be adapted to other journals
+
+% Changes since version 1.0
+% - elsarticle class option changed from 1p to 3p (to better reflect CRC layout)
+
+%-----------------------------------------------------------------------------------
+
+%% This template uses the elsarticle.cls document class and the extension package ecrc.sty
+%% For full documentation on usage of elsarticle.cls, consult the documentation "elsdoc.pdf"
+%% Further resources available at http://www.elsevier.com/latex
+
+%-----------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Important note on usage                  %%
+%% -----------------------                  %%
+%% This file must be compiled with PDFLaTeX %%
+%% Using standard LaTeX will not work!      %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The '3p' and 'times' class options of elsarticle are used for Elsevier CRC
+\documentclass[3p,times]{elsarticle}
+
+%% The `ecrc' package must be called to make the CRC functionality available
+\usepackage{ecrc}
+\usepackage{graphicx}
+
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} 
+%\usepackage[latin1]{inputenc}
+\usepackage{pifont} 
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{graphicx,url}
+\usepackage{placeins}
+\usepackage{adjustbox}
+\usepackage[english]{babel}
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage[svgnames]{xcolor} 
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{calc} 
+\usepackage{array,url,kantlipsum}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{txfonts}
+\usepackage{colortbl}%
+  \newcommand{\myrowcolour}{\rowcolor[gray]{0.925}}
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+  
+\lstset{
+language=Java,
+basicstyle=\small\ttfamily,
+numbers=left,
+numbersep=5pt,
+xleftmargin=20pt,
+frame=tb,
+framexleftmargin=20pt
+}
+
+\renewcommand*\thelstnumber{\arabic{lstnumber}:}
+
+\DeclareCaptionFormat{mylst}{\hrule#1#2#3}
+\captionsetup[lstlisting]{format=mylst,labelfont=bf,singlelinecheck=off,labelsep=space,font={normalsize,tt}}
+
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{lipsum}
+
+\extrafloats{100}
+%% The ecrc package defines commands needed for running heads and logos.
+%% For running heads, you can set the journal name, the volume, the starting page and the authors
+
+%% set the volume if you know. Otherwise `00'
+\volume{00}
+
+%% set the starting page if not 1
+\firstpage{1}
+
+%% Give the name of the journal
+\journalname{Information and Software Technology}
+
+%% Give the author list to appear in the running head
+%% Example \runauth{C.V. Radhakrishnan et al.}
+\runauth{}
+
+%% The choice of journal logo is determined by the \jid and \jnltitlelogo commands.
+%% A user-supplied logo with the name <\jid>logo.pdf will be inserted if present.
+%% e.g. if \jid{yspmi} the system will look for a file yspmilogo.pdf
+%% Otherwise the content of \jnltitlelogo will be set between horizontal lines as a default logo
+
+%% Give the abbreviation of the Journal.
+\jid{ist-elsevier}
+
+%% Give a short journal name for the dummy logo (if needed)
+\jnltitlelogo{Information and Software}
+
+%% Hereafter the template follows `elsarticle'.
+%% For more details see the existing template files elsarticle-template-harv.tex and elsarticle-template-num.tex.
+
+%% Elsevier CRC generally uses a numbered reference style
+%% For this, the conventions of elsarticle-template-num.tex should be followed (included below)
+%% If using BibTeX, use the style file elsarticle-num.bst
+
+%% End of ecrc-specific commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+%% \usepackage{lineno}
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+% if you have landscape tables
+\usepackage[figuresright]{rotating}
+
+% put your own definitions here:
+%   \newcommand{\cZ}{\cal{Z}}
+%   \newtheorem{def}{Definition}[section]
+%   ...
+
+% add words to TeX's hyphenation exception list
+%\hyphenation{author another created financial paper re-commend-ed Post-Script}
+
+% declarations for front matter
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+\dochead{}
+%% Use \dochead if there is an article header, e.g. \dochead{Short communication}
+
+\title{A Survey on Stress Testing design approaches}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+
+
+\author{Nauber Gois}
+\author{Pedro  Porfírio}
+\author{André  Coelho}
+
+\address{UNIFOR, Av. Washington Soares, 1321 - Edson Queiroz, Fortaleza - CE, 60811-905, Brazil}
+
+\begin{abstract}
+The objective of this paper is surveys stress test design approaches. We performed a systematic review of studies that use stress tests based on a comprehensive set of 97 articles obtained after a multi-stage selection process and have been published in the time span 1994–2016. The results of the review show that are two types of workload models applied on stress tests generative models and descriptible models. Descriptible model just try to mimic the phenomena observed in the workload, whereas generative models try to emulate the process that generated the workload to fault-inducing. The Workload design phase of stress testing uses two main aproaches: model-based tests and search-based tests. In model-based stress testing, tests use a model to describe the behavior of a system. Search-Based Software Testing is the use of a meta-heuristic optimizing search technique to automate or partially automate a testing task. 
+\end{abstract}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+Systematic Review \sep 
+Stress Testing \sep
+Model-based Testing \sep
+Search-based Testing \sep
+
+\end{keyword}
+
+\end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%%
+% \linenumbers
+
+\section{Introduction}
+
+Load, performance, and stress testing are typically done to locate bottlenecks in a system, to support a performance-tuning effort, and to collect other performance-related indicators to help stakeholders get informed about the quality of the application being tested \cite{Sandler2004} \cite{Corporation2007}. 
+
+Typically, the most common kind of performance testing for Internet applications is load testing. Application load can be assessed in a variety of ways \cite{Perry2004}:
+
+\begin{itemize}
+\item Concurrency. Concurrency testing seeks to validate the performance of an application with a given number of concurrent interactive users \cite{Perry2004}.
+\item Stress. Stress testing seeks to validate the performance of an application when certain aspects of the application are stretched to their maximum limits. This can include maximum number of users, and can also include maximizing table values and data values \cite{Perry2004}.
+\item Throughput. Throughput testing seeks to validate the number of transactions to be processed by an application during a given period of time. For example, one type of throughput test might be to attempt to process 100,000 transactions in one hour \cite{Perry2004}.
+\end{itemize}
+
+
+The performance testing aims at verifying a specified system performance. This kind of test is executed by simulating hundreds of simultaneous users or more over a defined time interval \cite{DiLucca2006}. The purpose of this assessment is to demonstrate that the system reaches its performance objectives \cite{Sandler2004}.  Term often used interchangeably with “stress” and “load” testing. Ideally “performance” testing is defined in requirements documentation or QA or Test Plans \cite{Lewis2005}.
+
+
+In a load testing, the system is evaluated at predefined load levels \cite{DiLucca2006}. The aim of this test is to determine whether the system can reach its performance targets for availability, concurrency, throughput, and response time. Load testing is the closest to real application use \cite{Molyneaux2009}. A typical load test can last from several hours to a few days, during which system behavior data like execution logs and various metrics are collected \cite{Afzal2009a}. 
+
+Stress testing investigates the behavior of the system under conditions
+that overload its resources. The stress testing verifies the system behavior against heavy workloads \cite{Sandler2004} \cite{Lewis2005}, which are executed to evaluate a system beyond its limits, validate system response in activity peaks, and verify whether the system is able to recover from these conditions. It differs from other kinds of testing in that the system is executed on or beyond its breakpoints, forcing the application or the supporting infrastructure to fail \cite{DiLucca2006} \cite{Molyneaux2009}.
+
+\section{Method}
+
+This paper surveys the state of the art literature in stress testing design research. The thesis extends the survey presented by Jiang et al. \cite{Jiang2010}  and Afzal et al. \cite{Afzal2009a} to the Stress Testing context.  This survey will be useful for stress testing practitioners and software engineering researchers with interests in testing and analyzing software systems. The paper use the systematic review method proposed by Kitchenham \cite{Kitchenham2007b}.
+
+
+
+The aim of a systematic review is to find as many primary studies relating to the research question as possible using an unbiased search strategy. The rigour of the search process is one factor that distinguishes systematic reviews from traditional reviews \cite{Kitchenham2007b}.
+
+Figure \ref{fig:RESUME} presents the summary result of systematic review process. The systematic review is based on a comprehensive set of 97 articles obtained after a multi-stage selection process and have been published in the time span 1994–2016. Of these 97 files, 31 files on model based tests, 17 files on search-based tests and 2 on the FOREPOST technique were selected.
+ 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{./images/systematic.png}
+\caption{Bubble chart for results of search with the keyword 'Load Testing'}
+\label{fig:RESUME}
+\end{figure}
+
+\subsection{Planning a Systematic Review}
+
+A systematic review of the literature details a protocol describing the process and the methods to be applied. The most important activity during the
+planning phase is the formulation of research questions. To Kitchenham,
+before undertaking a systematic review researchers must ensure that it is necessary and the protocol should be able to answer some questions \cite{Marinho2014}:
+
+\begin{itemize}
+\item What are the objectives of this review?
+\item What sources were searched to identify primary studies? Were there any restrictions?
+\item What were the criteria for inclusion / exclusion and how they are applied? 
+\item What criteria were used to evaluate the quality of the primary studies?
+\item How were the quality criteria applied?
+\item How was the data extracted from primary studies?
+\item What were the differences between studies investigated?
+\item  Because the data were combined?
+\end{itemize}
+
+
+\subsection{Research Questions}
+
+In order to examine the evidence of stress testing properties, we proposed the following four research questions:
+
+
+\begin{itemize}
+\item How is a stress test workload are designed?
+\item How is a stress test model-based test are designed?
+\item How is a stress test search-based test are designed?
+\item What other stress testing design techniques are used?
+
+\end{itemize}
+
+
+
+
+
+
+
+\subsection{Generation of search strategy}
+
+
+The population in this study is the domain of software testing. Intervention includes application of stress test techniques to test different types of non-functional properties. The primary studies used in this review were obtained from
+searching databases of peer-reviewed software engineering research that met the following criteria:
+\begin{itemize}
+\item  Contains peer-reviewed software engineering journals articles, conference proceedings, and book chapters.
+\item   Contains multiple journals and conference proceedings,
+which include volumes that range from 1996 to 2017.
+\item  Used in other software engineering systematic reviews.
+\end{itemize}
+
+The resulting list of databases was:
+
+\begin{itemize}
+\item  ACM Digital Library
+\item  Google Scholar
+\item  IEEE Electronic Library
+\item  Inspec
+\item  Scirus (Elsevier)
+\item SpringerLink
+\end{itemize}
+
+
+The search strategy was based on the following steps:
+
+\begin{itemize}
+\item  Identification of alternate words and synonyms for terms used
+in the research questions. This is done to minimize the effect
+of differences in terminologies.
+\item  Identify common stress testing properties for searching.
+\item Use of Boolean OR to join alternate words and synonyms.
+\item Use of Boolean AND to join major terms
+\end{itemize}
+
+We used the following search terms:
+
+\begin{itemize}
+\item Load Testing: load test, Load Testing
+\item Stress Testing: stress test, stress testing
+\item Performance Testing: performance tests
+\item Test tools: jmeter, load runner, performance tester
+\end{itemize}
+
+All papers found are stored in \url{https://www.mendeley.com/community/pesquisatesteperformance}. Figures \ref{fig:bubbleload} and \ref{fig:bubblestress} show the bubble chart for 'Load Testing'  and 'Stress Testing' keywords. Figures \ref{fig:wordcloudloadtesting} and \ref{fig:wordcloudloadtesting} present the word cloud extracted for title and abstract of the papers found with keywords 'Load testing' and'Stress testing'.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{./images/loadtestingbuble.png}
+\caption{Bubble chart for results of search with the keyword 'Load Testing'}
+\label{fig:bubbleload}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{./images/stresstestingbuble.png}
+\caption{Bubble chart for results of search with the keyword 'Stress Testing'}
+\label{fig:bubblestress}
+\end{figure}
+
+
+
+
+
+\subsection{Study selection criteria and procedures for including and excluding
+primary studies}
+
+The idealized selection process was done in two parts: an initial document selection of the results that could reasonably satisfy the selection criteria based on a title and the articles abstract reading, followed by a final selection of the initially selected papers based on the introduction and conclusion reading of the papers. The following exclusion criteria is applicable in this review, i.e. exclude studies that:
+\begin{itemize}
+\item Do not relate to stress testing.
+\item Do not relate to load testing tool.
+\item Do not relate to load/stress testing model.
+\end{itemize}
+
+From 366 initial papers, 97 papers was selected.
+
+\subsection{Data Synthesis}
+
+Data synthesis involves collating and summarising the results of the included primary studies. Synthesis can be descriptive (non-quantitative).  The studies was categorized by: 
+
+\begin{itemize}
+\item Type of stress test properties;
+\item Type of research paper (Thesis, Journal Article, Conference Paper, Book Section or Book)  
+\item Methodology used by the test (Model based Test, FOREPOST, Search-based Tests)
+\end{itemize}
+
+Figure \ref{fig:SUMMARY} presents the type of research paper by year.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{./images/type.png}
+\caption{Summary of type of research paper by year}
+\label{fig:SUMMARY}
+\end{figure}
+
+
+
+
+
+
+\subsection{Stress Test Process}
+
+Contrary to functional testing, which has clear testing objectives, Stress testing objectives are not clear in the early development stages and are often defined later on a case-by-case basis. The Fig. \ref{fig:testprocess} shows a common Load, Performance and Stress test process  \cite{Jiang2010}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{./images/testprocessh.png}
+\caption{Load, Performance and Stress Test Process \cite{Jiang2010}\cite{Erinle2013}}
+\label{fig:testprocess}
+\end{figure}
+
+
+The goal of the load design phase is to devise a load, which can uncover non-functional problems. Once the load is defined, the system under test executes the load and the system behavior under load is recorded. Load testing practitioners then analyze the system behavior to detect problems \cite{Jiang2010}. 
+
+Once a proper load is designed, a load test is executed. The load test execution phase consists of the following three main aspects: (1) Setup, which includes system deployment and test execution setup; (2) Load Generation and Termination, which consists of generating the load; and (3) Test Monitoring and Data Collection, which includes recording the system behavior during execution\cite{Jiang2010}. 
+
+The core activities in conducting an usual Load, Performance and Stress tests are \cite{Erinle2013}: 
+
+\begin{itemize}
+\item Identify the test environment: identify test and production environments and knowing the hardware, software, and network configurations helps derive an effective test plan and identify testing challenges from the outset.
+
+\item Identify acceptance criteria: identify the response time, throughput, and resource utilization goals and constraints.
+
+\item Plan and design tests:identify the test scenarios.In the context of testing, a scenario is a sequence of steps in an application. It can represent a use case or a business function such as searching a product catalog, adding an item to a shopping cart, or placing an order \cite{Corporation2007}. This task includes a description
+of the speed, availability, data volume throughput rate, response
+time, and recovery time of various functions, stress, and so on. This
+serves as a basis for understanding the level of performance and
+stress testing that may be required to each test scenario \cite{Lewis2005}.
+
+\item Prepare the test environment: configure the test environment, tools, and resources necessary to conduct the planned test scenarios.
+
+\item Record the test plan: record the planned test scenarios using a testing tool.
+
+\item Run the tests: Once recorded, execute the test plans under light load and verify the correctness of the test scripts and output results.
+
+\item Analyze results, report, and retest: examine the results of each successive run and identify areas of bottleneck that need addressing.  
+
+\end{itemize}
+
+
+
+\FloatBarrier
+
+\section{Research Question 1:How is a stress test workload are designed?}
+
+The design of a stress test depends intrinsically on the load model applied to the software under test. Based on the objectives, there are two general schools of thought for designing a proper load to achieve such objectives \cite{Afzal2009a}:
+
+\begin{itemize}
+\item Designing Realistic Loads (Workload Descriptive). 
+\item Designing Fault-Inducing Loads ( Workload Generative).
+\end{itemize}
+
+In Designing Realistic Loads, the main goal of testing is to ensure that the system can function correctly once. Designing Fault-Inducing Loads  aims to design loads, which are likely to cause functional or non-functional problems \cite{Afzal2009a}.
+
+Stress testing projects should start with the development of a model for user workload that an application receives. This should take into consideration various performance aspects of the application and the infrastructure that a given workload will impact. A workload is a key component of such a model \cite{Molyneaux2009}.
+
+The term workload represents the size of the demand that will be imposed on the application under test in an execution. The metric  used for measure a workload is dependent on the application domain, such as the length of the video in a transcoding application for multimedia files or the size of the input files in a file compression application \cite{Feitelson2013} \cite{Molyneaux2009} \cite{Goncalves2014}. 
+
+Workload is also defined by the load distribution between the identified transactions at a given time. Workload helps researchers study the system behavior identified in several load models. A workload model can be designed to verify the predictability, repeatability, and scalability of a system \cite{Feitelson2013} \cite{Molyneaux2009}.
+
+
+Workload modeling is the attempt to create a simple and generic model that can then be used to generate synthetic workloads. The goal is typically to be able to create workloads that can be used in performance evaluation studies. Sometimes, the synthetic workload is supposed to be similar to those that occur in practice in real systems \cite{Feitelson2013} \cite{Molyneaux2009}.
+
+There are two kinds of workload models: descriptive and generative. The main difference between the two is that descriptive models just try to mimic the phenomena observed in the workload, whereas generative models try to emulate the process that generated the workload in the first place \cite{DiLucca2006}. 
+
+In descriptive models, one finds different levels of abstraction on the one hand and different levels of fidelity to the original data on the other hand. The most strictly faithful models try to mimic the data directly using the statistical distribution of the data. The most common strategy used in descriptive modeling is to create a statistical model of an observed workload (Fig. \ref{fig:descriptivemodel}). This model is applied to all the workload attributes, e.g., computation, memory usage, I/O behavior, communication, etc. \cite{DiLucca2006}. Fig. \ref{fig:descriptivemodel} shows a simplified workflow of a descriptive model. The workflow has six phases. In the first phase, the user uses the system in the production environment. In the second phase, the tester collects the user's data, such as logs, clicks, and preferences, from the system. The third phase consists in developing a model designed to emulate the user's behavior. The fourth phase is made up of the execution of the test, emulation of the user's behavior, and log gathering.
+
+
+
+\begin{figure}[h]
+
+\centering
+\includegraphics[width=0.5\textwidth]{./images/workloadmodel1300dpi.png}
+\caption{Workload modeling based on statistical data \cite{DiLucca2006}}
+\label{fig:descriptivemodel}
+\end{figure}
+
+
+Generative models are indirect in the sense that they do not model the statistical distributions. Instead, they describe how users will behave when they generate the workload. An important benefit of the generative approach is that it facilitates manipulations of the workload. It is often desirable to be able to change the workload conditions as part of the evaluation. Descriptive models do not offer any option regarding how to do so. With the generative models, however, we can modify the workload-generation process to fit the desired conditions \cite{DiLucca2006}. The difference between the workflows of the descriptive and the generative models is that user behavior is not collected from logs, but simulated from a model that can receive feedback from the test execution (Fig. \ref{fig:generativemodel}).
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./images/workloadmodel2300dpi.png}
+\caption{Workload modeling based on the generative model \cite{DiLucca2006}}
+\label{fig:generativemodel}
+
+\end{figure}
+
+Both load model have their advantages and disadvantages. In general, loads resulting from realistic-load based design techniques (Descriptive models) can be used to detect both functional and non-functional problems. However, the test durations are usually longer and the test analysis is more difficult. Loads resulting from fault-inducing load design techniques (Generative models) take less time to uncover potential functional and non-functional problems, the resulting loads usually only cover a small portion of the testing objectives \cite{Jiang2010}. The presented research work uses a generative model.
+
+
+There are  several approaches to design generative or descriptive workloads:
+
+\begin{itemize}
+\item Model-based Stress testing: a usage model is proposed to simulate users’ behaviors.
+\item Feedback-ORiEnted PerfOrmance Software Testing: is an adaptive, feedback-directed learning testing system that learns rules from system execution \cite{Luo2015} \cite{Wert2014}.
+\item Search-based Stress testing. 
+\end{itemize}
+
+
+\section{Research Question 2:How is a stress test workload are designed?}
+
+Model-based testing is an application  of models to represent the desired behavior of a System Under Test or to represent testing strategies in a test. Some research aproaches proposes models to simulate or  generate realistic loads. Model-based testing (MBT) is a variant of testing that relies on explicit behaviour models that encode the intended behaviours of a system under test. Test cases are generated from one of these models or their combination \cite{MarkUtting2012} \cite{Bertolino2008}. 
+
+The model paradgim is what paradigm and notation are used to describe the model. There are many different modelling notations that have been used for modelling the behaviour of systems for test generation purposes \cite{MarkUtting2012} \cite{Hierons2009}. 
+
+\begin{itemize}
+\item State-Based (or Pre/Post) Notations. These model a system as a collection of variables, which represent a snapshot of the internal state of the system, plus some operations that modify those variables. Each operation is usually defined by a precondition and a postcondition, or the postcondition may be written as explicit code that updates the state \cite{MarkUtting2012}.
+\item Transition-based Notations. These focus on describing the transitions between different states
+of the system. Typically, they are graphical node-and-arc notations, like finite state machines
+(FSMs). Examples of transition-based notations used for MBT include FSMs themselves, statecharts, labelled transition systems and I/O automata \cite{MarkUtting2012}.
+\item History-based Notations. These notations model a system by describing the allowable traces
+of its behaviour over time. Message-sequence charts and related formalisms are also included in this group. These are
+graphical and textual notations for specifying sequences of interactions between components \cite{MarkUtting2012}.
+\item Functional Notations. These describe a system as a collection of mathematical functions. The
+functions may be first-order only, as in the case of algebraic specifications, or higher-order, as in
+notations like HOL \cite{MarkUtting2012}.
+\item Operational Notations. These describe a system as a collection of executable processes,
+executing in parallel. They are particularly suited to describing distributed systems and
+communications protocols. Examples include process algebras such as CSP or CCS as well as
+Petri net notations. Slightly stretching this category, hardware description languages like VHDL
+or Verilog are also included in this category \cite{MarkUtting2012}.
+\item Stochastic Notations. These describe a system by a probabilistic model of the events and input
+values and tend to be used to model environments rather than SUTs. For example, Markov chains
+are used to model expected usage profiles, so that the generated tests scenarios \cite{MarkUtting2012}.
+\item Data-Flow Notations. These notations concentrate on the data rather than the control flow.
+Prominent examples are Lustre, and the block diagrams of Matlab Simulink, which are often used
+to model continuous systems \cite{MarkUtting2012}.
+\end{itemize}
+
+A User Community Modeling Language (UCML) is a set of symbols that can be used to create visual system usage models and depict associated parameters \cite{Wang2013}. The Fig. \ref{fig:ucml} shows a sample where all users realize a login into the application unde test. Once logged in, 40\% of the users navigates on the aplication, 30\%  of the users realizes downloads. 20\% of users realizes uploads and 10\% of users performs deletions.
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{./images/ucml.png}
+\caption{User community modeling language \cite{Wang2013}}
+\label{fig:ucml}
+
+\end{figure}
+
+Another technique to create workload models it is Stochastic Formcharts. The work of Draheim and Weber’s Formoriented analysis is a methodology for the specification of ultra-thin client based systems. Form-oriented models describe a web application as a bipartite state machine which consists of pages, actions, and transitions between them. Stochastic Formcharts are the combination of formoriented model and probability features. The Fig. \ref{fig:stform} shows a sample where all users have a probability of 100\% of realize a login into the application under test. Once logged in, users have a probability of 40\% of navigate on the application and so on \cite{Draheim2006b}.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./images/stochastic.png}
+\caption{Stochastic Formcharts Example \cite{Draheim2006b} \cite{Wang2013}}
+\label{fig:stform}
+\end{figure}
+
+One way to capture the navigational pattern within a session is through the Customer Behavior Model Graph (CBMG). Figure \ref{fig:cbmg} depicts an example of a CBMG showing that customers may be in several different states—Home, Browse, Search, Select, Add, and Pay—and they may transition between these states as indicated by the arcs connecting them. The numbers on the arcs represent transition probabilities. A state not explicitly represented in the figure is the Exit state \cite{Menasce2002a} \cite{Jiang2010} \cite{MohammadS.Obaidat}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./images/cbmg.png}
+\caption{Example of a Customer Behavior Model Graph (CBMG)  \cite{Menasce2002a} \cite{Jiang2010} \cite{MohammadS.Obaidat}}
+\label{fig:cbmg}
+\end{figure}
+
+Garousi et al. proposes derivate Stress Test Requirements from an UML model. The input model consists of a number of UML diagrams. Some of
+them are standard in mainstream development methodologies and others are needed to describe the distributed architecture of the system under test (Fig. \ref{fig:modelbased}).
+
+\begin{figure}[h]
+\begin{minipage}{0.5\textwidth}
+\centering
+\includegraphics[width=1\textwidth]{./images/modelmethodology.png}
+\caption{Model-based stress test methodology}
+\label{fig:modelbased}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\centering
+\includegraphics[width=0.6\textwidth]{./images/vogel.png}
+\caption{Exemplary workload model}
+\label{fig:vogel}
+\end{minipage}
+\end{figure}
+
+Vogele et al. presents an approach that aims to automate the extraction and transformation of workload specifications for an model-based performance prediction of session-based application systems.  The research also presents transformations to the common load testing tool Apache JMeter and to the Palladio Component Model \cite{Vogele2016}. The workload specification formalism (Workload Model) consists of the following components, which are detailed below and illustrated in Fig. \ref{fig:vogel}:
+\begin{itemize}\item An Application Model, specifying allowed sequences of service invocations and SUT-specific details for generating valid requests.\item A set of Behavior Models,each providing a probabilistic representation of user sessions in terms of invoked services.\item A Behavior Mix, specified as probabilities for the individual Behavior Models to occur during workload gen- eration.\item A Workload Intensity that includes a function which specifies the number of concurrent users during the workload generation execution.
+\end{itemize}
+
+
+\section{Research Question 3:How is a stress test workload are designed?}
+
+Search-Based Testing is the process of automatically
+generating test according to a test adequacy criterion,encoded as a fitness function, using search-based optimization algorithms, which are guided by a fitness function. The role of the fitness function is to capture a test objective that, when achieved, makes a contribution to the desired test adequacy criterion \cite{Harman2010}. 
+
+Search–Based Testing uses metaheuristic algorithms to
+automate the generation of test inputs that meet a test
+adequacy criterion. Many algorithms have been considered in the past, including Simulated Annealing, Parallel Evolutionary Algorithms \cite{Alba2008},Evolution Strategies, Estimation of Distribution Algorithms , Scatter Search , Particle Swarm Optimization , Tabu Search and the Alternating Variable Method. An advantage of meta-heuristic algorithms is that they
+are widely applicable to problems that are infeasible for analytic approaches. All one has to do is come up with a representation for candidate solutions and an objective function to evaluate those solution \cite{Baars2011}. 
+
+The application of metaheuristic search techniques to test case generation is a possibility which offers much benefits. Metaheuristic search techniques are high-level frameworks which utilise heuristics in order to find solutions to combinatorial problems at a reasonable computational cost. Such a problem may have been classified as NP-complete or NP-hard, or be a problem for which a polynomial time algorithm is known to exist but is not practical \cite{McMinn2004}.
+
+One of the most popular search techniques used in SBST belong to the family of Evolutionary Algorithms in what is known as Evolutionary Testing. Evolutionary Algorithms represent a class of adaptive search techniques based on natural genetics and Darwin’s theory of evolution. They are characterized by an iterative procedure that works in parallel on a number of potential solutions to a problem. Figure \ref{fig:evocycle}  shows the cycle
+of an Evolutionary Algorithm when used in the context of
+Evolutionary Testing \cite{Baars2011}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./images/evolutionary.png}
+\caption{Evolutionary Algorithm Search Based Test Cycle\cite{Baars2011}. }
+\label{fig:evocycle}
+\end{figure}
+
+First, a population of possible solutions to a problem
+is created, usually at random. Starting with randomly
+generated individuals results in a spread of solutions ranging in fitness because they are scattered around the search–space. Next, each individual in the population is evaluated by calculating its fitness via a fitness function. The principle idea of an Evolutionary Algorithm is that fit individuals survive over time and form even fitter individuals in future
+generations. Selected individuals are then recombined
+via a crossover operator. After crossover, the resulting offspring individuals may be subjected to a mutation operator. The algorithm iterates until a global optimum is reached or another stopping condition is fulfilled \cite{Baars2011}. 
+
+The fitness evaluation is the most
+time consuming task of SBST. However, for time consuming functional testing of complex industrial systems, minimizing
+the number of generated individuals may also be highly desirable. This might be done using an assumption about
+the "potential" of individuals in order to predict which individuals are likely to contribute to any future improvement.
+This prediction could be achieved by using information about similar individuals that have been executed in earlier generations.
+
+
+
+\subsubsection{Non-functional Search-Based Testing}
+
+SBST has made many achievements, and demonstrated its wide applicability and increasing uptake. Nevertheless, there are pressing open problems and challenges that need more attention like to extend SBST to test non-functional properties, a topic that remains relatively under-explored, compared to structural testing. There are many kinds of non-functional search based tests  \cite{Afzal2009a}:
+
+\begin{itemize}
+\item Execution time: The application of evolutionary algorithms to find the best and worst case execution times (BCET, WCET).
+\item Quality of service: uses metaheuristic search techniques to search violations of service level agreements (SLAs).
+\item Security: apply a variety of metaheuristic search techniques  to detect security vulnerabilities like detecting buffer overflows.
+\item Usability: concerned with construction of covering array which is a combinatorial object.
+\item Safety: Safety testing is an important component of the testing strategy of safety critical systems where the systems are required to meet safety constraints.
+\end{itemize}
+
+A variety of metaheuristic search techniques are found to be applicable for non-functional testing including simulated annealing, tabu search, genetic algorithms, ant colony methods, grammatical evolution, genetic programming and swarm intelligence methods. The Fig. \ref{fig:metabykind} shows a comparison between the range of metaheuristcs and the type of non-functional search based test.The Data comes from Afzal et al. \cite{Afzal2009a}. Afzal's work was added with some of the latest research in this area (\cite{Garousi2006} \cite{Garousi2010} \cite{DiAlesio2013} \cite{DiAlesio2014} \cite{Alesio2015} \cite{Gois2016}). 
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{./images/metaheuristics.png}
+\caption{Range of metaheuristics by Type of non-functional Search Based Test\cite{Afzal2009a}. }
+\label{fig:metabykind}
+\end{figure}
+
+
+
+
+
+
+The search for the longest execution time is regarded as a discontinuous, nonlinear, optimization problem, with the input domain of the system under test as a search space \cite{Sullivan}.  The application of SBST algorithms to  stress tests involves finding the best- and worst-case execution times (B/WCET) to determine whether timing constraints are fulfilled \cite{Afzal2009a}. 
+
+There are two measurement units normally associated with the fitness function in stress test: processor cycles and execution time. The processor cycle approach describes a fitness function in terms of processor cycles. The execution time approach involves executing the application under test and measuring the execution time \cite{Afzal2009a} \cite{tracey2000search}.
+
+Processor cycles measurement is deterministic in the sense that it is independent of system load and results in the same execution times for the same set of input parameters. However, such a measurement is dependent on the compiler and optimizer used, therefore, the processor cycles differ for each platform. Execution time measurement is a non deterministic approach, there is no guarantee to get the same results for the same test inputs \cite{Afzal2009a}.  However, stress testing where testers have no access to the production environment should be measured by the execution time measurement \cite{Molyneaux2009} \cite{Afzal2009a}.
+
+Table \ref{tab:comparison}  shows a comparison between the research studies on load, performance, and stress tests presented by Afzal et al. \cite{Afzal2009a}. Afzal's work was added to some of the latest research in this area (\cite{Garousi2006} \cite{Garousi2010} \cite{DiAlesio2013} \cite{DiAlesio2014} \cite{Alesio2015} \cite{Gois2016} ). The columns represent the type of tool used (prototype or functional tool), and the rows represent the metaheuristic approach used by each research study (genetic algorithm, Tabu search, simulated annealing, or a customized algorithm). The table also sorts the research studies by the type of fitness function used (execution time or processor cycles). 
+
+
+\begin{table}[h]
+\centering
+\caption{Distribution of the research studies over the range of applied metaheuristics}
+\label{tab:comparison}
+\begin{tabular}{p{2.2cm}|p{2.8cm}|p{2.8cm}|p{2.8cm}|}
+\cline{2-4}
+                                                                & \multicolumn{2}{c|}{\textbf{Prototypes}}            & \textbf{Functional Tool} \\ \cline{2-4} 
+                                                                & \begin{minipage}{0.2\textwidth}\footnotesize Execution Time  \end{minipage}          & \begin{minipage}{0.2\textwidth}\footnotesize Processor Cycles \end{minipage}        & \begin{minipage}{0.2\textwidth}\footnotesize Execution Time \end{minipage}           \\ \cline{2-4} 
+%\setlength{\extrarowheight}{20pt}
+\begin{tabular}[c]{@{}l@{}}\begin{minipage}{0.1\textwidth}\scriptsize GA + SA  \\ + Tabu \\ Search \end{minipage}\end{tabular}  & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.2\textwidth} \tiny Gois et al. 2016 \cite{Gois2016}  \end{minipage}  \\[2ex] \cline{2-4} 
+\begin{minipage}{0.1\textwidth}\scriptsize GA \end{minipage}                                                              & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth}   \tiny \textnormal{ \\  Alander et al.,1998 \cite{Alander} \\ Wegener et al., 1996 and 1997 \cite{Wegener1997}\cite{J.WegenerK.GrimmM.GrochtmannH.Sthamer1996} \\  Sullivan et al., 1998 \cite{Sullivan} \\ Briand et al., 2005 \cite{Briand2005} \\ Canfora et al., 2005 \cite{Canfora}  \\ }\end{minipage} & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth} \tiny \textrm{  \\ Wegener and Grochtmann, 1998 \cite{Wegener1998} \\  Mueller et al., 1998 \cite{Mueller1998} \\ Puschner et al. \cite{Puschner1998} \\ Wegener et al., 2000 \cite{Stations} \\ Gro et al., 2000 \cite{Gross2000}  \\ }\end{minipage}& \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth}   \tiny \textnormal{ \\  Di Penta, 2007 \cite{Penta2007} \\ Garoussi, 2006 \cite{Garousi2006} \\ Garousi, 2008 \cite{Garousi2008} \\ Garousi, 2010 \cite{Garousi2010} \\ } \end{minipage} \\[2ex] \cline{2-4} 
+\begin{minipage}{0.1\textwidth}\scriptsize Simulated \\ Annealing \\ (SA) \end{minipage}                                                             & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth}   \tiny  Tracey, 1998 \cite{Tracey1998} \end{minipage} \\[2ex] \cline{2-4}
+\begin{minipage}{0.1\textwidth}\scriptsize  Constraint \\ Programming \end{minipage}                                                             & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth}   \tiny  Alesio, 2014 \cite{DiAlesio2014} \\ Alesio, 2013 \cite{DiAlesio2013}  \end{minipage} \\[2ex] \cline{2-4} 
+\begin{minipage}{0.1\textwidth}\scriptsize  GA +\\ Constraint \\ Programming \end{minipage}                                                             & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth}   \tiny  Alesio, 2015 \cite{Alesio2015} \end{minipage} \\[2ex] \cline{2-4} 
+\setlength{\extrarowheight}{20pt}
+\begin{tabular}[c]{@{}l@{}}
+\begin{minipage}{0.1\textwidth}\scriptsize Customized \\ Algorithm \end{minipage}\end{tabular} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF}  \begin{minipage}{0.12\textwidth}   \tiny  \textnormal{   \raggedleft Pohlheim, 1999 \cite{Pohlheim2005}  } \end{minipage} & \cellcolor[HTML]{FFFFFF} \\[4ex] \cline{2-4}
+\end{tabular}
+\end{table}
+
+The studies can be grouped into two main groups:
+
+\begin{itemize}
+\item Search-Based Stress Tesing on Safety-critical systems.
+\item Search-Based Stress Testing on Non Safety-critical systems.
+\end{itemize}
+
+
+\subsubsection{Search-Based Stress Tesing on Safety-critical systems}
+
+Domains such as avionics, automotive and aerospace feature safety-critical systems, whose failure could result in catastrophic consequences.  The importance
+of software in such systems is permanently increasing due to the need of a higher system
+flexibility. For this reason, software components of these systems are usually subject to safety certification. In this context, software safety certification has to take into account performance requirements specifying constraints on how the system should react to its environment, and how it should execute on its hardware platform \cite{DiAlesio2013}.
+
+Usually, embedded computer systems have to fulfil real-time requirements. A faultless function of the systems does not depend only on their logical correctness but also on their temporal correctness. Dynamic aspects like the duration of computations, the memory actually needed during program execution, orthe synchronisation of parallel processes are of major importance for the correct function of real-time systems  \cite{J.WegenerK.GrimmM.GrochtmannH.Sthamer1996} .
+
+The concurrent nature of embedded software makes  the order of external events triggering the systems tasks is often unpredictable. Such increasing software complexity
+renders performance analysis and testing increasingly
+challenging. This aspect is reflected by the fact that most existing testing approaches target system functionality rather than performance \cite{DiAlesio2013}.
+
+Reactive real-time systems must react to external events within time constraints. Triggered tasks must execute within deadlines. Shousha develops a methodology for the derivation of test cases that aims at maximizing the chance of critical deadline misses \cite{shousha2003performance}. 
+
+The main goal of Search-Based Stress testing of Safety-critical systems it is finding a combination of inputs that causes the system to delay task completion to the greast extent possible \cite{shousha2003performance}. The followed approaches uses metaheuristics to discover the worst-case execution times. 
+
+Wegener et al. \cite{Wegener1997} used genetic algorithms(GA) to search for input situations that produce very long or very short execution times. The fitness function used was the execution time of an individual measured in micro seconds \cite{Wegener1997}. Alander et al. \cite{Alander} performed experiments in a simulator environment to measure response time extremes of protection relay software using genetic algorithms. The fitness function used was the response time of the tested software. The results showed that GA generated more input cases with longer response times \cite{Alander}. 
+
+Wegener and Grochtmann performed a  experimentation
+to compare GA with random testing. The fitness function used was duration of execution measured in processor cycles.  The results showed that, with a large number of input parameters, GA obtained more extreme execution times with less or equal testing effort than random testing \cite{J.WegenerK.GrimmM.GrochtmannH.Sthamer1996} \cite{Wegener1998}.
+
+
+Gro et. al. \cite{Gross2000} presented a prediction model  which can be used to predict evolutionary testability. The research confirmed that there is a relationship between the complexity of a test object and the ability of a search algorithm to produce input parameters according to B/WCET \cite{Gross2000}. 
+
+Briand et al. \cite{Briand2005} used GA to find the sequence of arrival times of events for aperiodic tasks, which will cause the greatest delays in the execution of the target task. A prototype tool named real-time test tool (RTTT) was developed to facilitate the execution of runs of genetic algorithm. Two case studies were conducted and results illustrated that RTTT was a useful tool to stress a system under test \cite{Briand2005}.
+
+
+Pohlheim and Wegener used an extension of genetic algorithms with multiple sub-populations, each using a different search strategy. The duration of execution measured in processor cycles was taken as the fitness
+function. The GA found longer execution times for all the given modules in comparison with systematic testing\cite{Pohlheim2005}.
+
+Garousi presented a stress test methodology aimed at increasing chances of discovering faults related to distributed traffic in distributed systems. The technique uses as input a specified UML 2.0 model of a system, augmented with timing information.The results indicate that the technique is significantly more effective at detecting distributed traffic-related faults when compared to standard test cases based on an operational profile \cite{Garousi2006}.
+
+Alesio, Nejati and Briand describe a approach based
+on Constraint Programming (CP) to automate the generation of test cases that reveal, or are likely to, task deadline misses. They evaluate it through a comparison with a state-of-the-art approach based on Genetic Algorithms (GA). In particular, wthe study compares CP and GA in five case studies for efficiency, effectiveness, and scalability. The experimental results show that, on the largest and more complex case studies, CP performs significantly better than GA. The research proposes a tool-supported, efficient and effective approach based on CP to generate stress test cases that maximize the likelihood of task deadline misses \cite{DiAlesio2013}.
+
+Alesio describe stress test case generation as a search problem over the space of task arrival times. The research search for worst case scenarios maximizing deadline misses where each scenario characterizes a test case. The paper combine two strategies, GA and Constraint Programming (CP). The results show that, in comparison with GA and CP in isolation, GA+CP achieves nearly the same effectiveness as CP and the same efficiency and solution diversity as GA, thus combining the advantages of the two strategies. Alesio concludes that a combined GA+CP approach to stress testing is more likely to scale to large and complex systems \cite{Alesio2015}.
+
+\subsubsection{Search-Based Stress Testing on Non Safety-critical systems} 
+
+Usually, the application of Search-Based Stress Testing on non safety-critical systems deals with the generation of test cases that causes Service Level Agreements violations.
+
+
+Tracey et al. \cite{Tracey1998} used simulated annealing (SA) to test four
+simple programs. The results of the research presented that the use of SA was more effective with larger parameter space. The authors highlighted the need of a detailed comparison of various optimization techniques to explore WCET and BCET of the of the system under test \cite{Tracey1998}.
+
+Di Penta et al. \cite{Penta2007} used GA to create test data that violated QoS constraints causing SLA violations. The generated test data included combinations of inputs. The approach was applied to two case studies. The first case study was an audio processing workflow. The second case study, a service producing charts, applied the black-box approach with fitness calculated only on the basis of how close solutions violate QoS constraint. The genome representation is presented in Fig \ref{fig:dipenta}. The representation models a wsdl request to a webservice.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./images/dipenta.png}
+\caption{Genome representation \cite{Penta2007}. }
+\label{fig:dipenta}
+\end{figure}
+
+
+
+In case of audio workflow, the GA outperformed random search. For the second case study, use of black-box approach successfully violated the response time constraint, showing the violation of QoS constraints for a real service available on the Internet \cite{Penta2007}.
+
+
+Gois et al. proposes an hybrid metaheuristic approach using genetic algorithms, simulated annealing, and tabu search algorithms to perform stress testing. A tool named IAdapter, a JMeter plugin used for performing search-based stress tests, was developed. Two experiments were performed to validate the solution. In the first experiment, the signed-rank Wilcoxon non- parametrical procedure was used for comparing the results. The significant level adopted was 0.05. The procedure showed that there was a significant improvement in the results with the Hybrid Metaheuristic approach.In the second experiment, the whole process of stress and performance tests, which took 3 days and about 1800 executions, was carried out without the need for monitoring by a test designer. The tool automatically selected the next scenarios to be run up to the limit of six generations previously established \cite{Gois2016}. 
+
+\FloatBarrier
+
+\section{Research Question 4:How is a stress test workload are designed?}
+
+Feedback-ORiEnted PerfOrmance Software Testing (FOREPOST) is an adaptive, feedback-directed learning testing system that learns rules from system execution traces and uses these learned rules to select test input data automatically to find more performance problems in applications when compared to exploratory random performance testing \cite{Grechanik2012}.
+
+FOREPOST uses runtime monitoring for a short duration of testing together with machine learning techniques and automated test scripts to reduce large amounts of performance-related information collected during AUT runs to a small number of descriptive rules that provide insights into properties of test input data that lead to increased computational loads of applications.
+
+The Fig. \ref{fig:forepost} presents the main workflow of FOREPOST solution. The first step,  The Test Script is written  by the test engineer(1). Once the test script starts, its execution traces are collected (2) by the Profiler, and these traces are forwarded to the Execution Trace Analyzer, which produces (3) the Trace Statistics. The trace statistics is supplied (4) to Trace Clustering, which uses an ML algorithm, JRip to perform unsupervised clustering of these traces into two groups that correspond to (6) Good and (5) Bad test traces. 
+
+The user can review the results of clustering (7). These clustered traces are supplied (8) to the Learner that uses them to learn the classification model and (9) output rules. The user can review (10) these rules and mark some of them as erroneous if the user has sufficient evidence to do so. Then the rules are supplied (11) to the Test Script. Finally, the input space is partitioned into clusters that lead to good and bad test cases, to find methods that are specific to good performance test cases. This task is accomplished in parallel to computing rules, and it starts when the Trace Analyzer produces (12) the method and data statistics that is used to construct (13) two matrices (14). Once these matrices are constructed, ICA decomposes them (15) into the matrices for bad and good test cases correspondingly. Finally, the Advisor (16) determines top methods that performance testers should look at (17) to debug possible performance problems.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./images/FOREPOST.png}
+\caption{The architecture and workflow of FOREPOST}
+\label{fig:forepost}
+\end{figure}
+
+
+
+
+
+\FloatBarrier
+
+\section{Conclusion}
+
+This systematic review investigated the use of stress test techniques. Figure \ref{fig:systematicreview} present the results summary of the systematic review. The Test Design phase could use Realistic Load and Fault-Inducing Load. Realistic Load just try to mimic the phenomena observed in the workload, whereas generative models try to emulate the process that generated the workload in the first place. There are  several approaches to design generative or descriptive workloads. 
+
+In Model-based Stress testing, usage model is proposed to simulate users’ behaviours. The model paradigm is what paradigm and notation are used to describe the model. There are many different modelling notations that have been used for modelling the behaviour of systems for test generation purposes: State-Based (or Pre/Post) Notations;
+Transition-based Notations; History-based Notations; Functional Notations; Operational Notations; Stochastic Notations and Data-Flow Notations. There are many kinds of non-functional search based tests: Execution time, Quality of service, Security, Usability and  Safety. 
+
+Feedback-ORiEnted PerfOrmance Software Testing (FOREPOST) is an adaptive, feedback-directed learning testing system that learns rules from system execution traces and uses these learned rules to select test input data automatically to find more performance problems in applications when compared to exploratory random performance testing. 
+
+Search-Based Testing is the process of automatically generating test according to a test adequacy criterion. The application of SBST algorithms to  stress tests involves finding the best- and worst-case execution times (B/WCET) to determine whether timing constraints are fulfilled. There are two measurement units normally associated with the fitness function in stress test: processor cycles and execution time. The processor cycle approach describes a fitness function in terms of processor cycles. The execution time approach involves executing the application under test and measuring the execution time.
+
+The stress test execution  consists of deploy the system  and setup test execution ; generating the workloads according to the configurations and terminating the load when the load test is completed and recording the system behaviour. There are three general approaches of load test executions: Live-User Based, Driver-Based and Emulation-Based. In Live-User Based Executions, The test examines a system’s behavior when the system is simultaneously used by many users or execute a load test by employing a group of human testers. The driver based execution approach automatically generate thousands or millions of concurrent requests for a long period of time using a software tool. The emulation based load test execution approach performs the load testing on special platforms and doesn't require a fully functional system and conduct load testing.
+
+
+There are several antipatterns that details features about  common performance problems. Blob is an antipattern whose problem is on the excessive message traffic generated by a single class or component. Unbalanced Processing it's characterises for one scenario where a specific class of requests generates a pattern of execution within the system that tends to overload a particular resource.
+
+
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% References
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}         ==>>  [#]
+%%   \cite[chap. 2]{key} ==>> [#, chap. 2]
+%%
+
+%% References with BibTeX database:
+
+\bibliographystyle{elsarticle-num}
+\bibliography{biblio}
+
+%% Authors are advised to use a BibTeX database file for their reference list.
+%% The provided style file elsarticle-num.bst formats references in the required Procedia style
+
+%% For references without a BibTeX database:
+
+% \begin{thebibliography}{00}
+
+%% \bibitem must have the following form:
+%%   \bibitem{key}...
+%%
+
+% \bibitem{}
+
+% \end{thebibliography}
+
+\end{document}
+
+%%
+%% End of file `ecrc-template.tex'. 
